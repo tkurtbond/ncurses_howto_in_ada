@@ -1,0 +1,36 @@
+project Ncurses_Howto_In_Ada is
+   -- ADA_INCLUDE_PATH=/usr/local/sw/versions/AdaCurses/20211021/share/ada/adainclude
+   -- ADA_OBJECTS_PATH=/usr/local/sw/versions/AdaCurses/20211021/lib/ada/adalib
+      
+   for Source_Dirs use ("src/basics");
+   for Object_Dir use "obj";
+   for Exec_Dir use "bin";
+
+   package Compiler is 
+      for Default_Switches ("Ada") use 
+        (
+         "-gnat2012",         --  Ada 2012 for portability
+         "-gnatef",           --  use full pathnames in error messages
+         "-gnatf",             --  full error messages
+         "-g"
+        );
+   end Compiler;
+
+   package Binder is 
+      for Default_Switches ("Ada") use ("-Es");
+   end Binder;
+
+   package Linker is
+      for Default_Switches ("Ada") use ("-lAdaCurses");
+   end Linker;
+
+   for Main use 
+     (
+      "hello_world",
+      "init_func_example",
+      "simple_put_example"
+     );
+end Ncurses_Howto_In_Ada;
+-- Local Variables:
+-- compile-command: "gprbuild -P ncurses_howto_in_ada.gpr"
+-- End:
