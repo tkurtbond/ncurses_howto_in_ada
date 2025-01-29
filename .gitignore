@@ -3,3 +3,19 @@
 
 # Ada Library Information
 *.ali
+
+# Executable directory
+bin
+
+# Object directory
+obj
+
+# Unsightly droppings.
+*~
+.DS_Store
+.\#*
+.\#*
+.~
+.~*\#
+\#*\#
+\#*\#
