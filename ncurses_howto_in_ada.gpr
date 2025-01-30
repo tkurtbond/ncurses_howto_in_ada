@@ -31,7 +31,8 @@ project Ncurses_Howto_In_Ada is
       "simple_put_example",
       "simple_get_example",
       "simple_attributes",
-      "with_change_attributes"
+      "with_change_attributes",
+      "window_border"
      );
 end Ncurses_Howto_In_Ada;
 -- Local Variables:
