@@ -28,7 +28,8 @@ project Ncurses_Howto_In_Ada is
      (
       "hello_world",
       "init_func_example",
-      "simple_put_example"
+      "simple_put_example",
+      "simple_get_example"
      );
 end Ncurses_Howto_In_Ada;
 -- Local Variables:
