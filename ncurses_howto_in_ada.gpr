@@ -34,7 +34,8 @@ project Ncurses_Howto_In_Ada is
       "with_change_attributes",
       "window_border",
       "other_border",
-      "simple_color"
+      "simple_color",
+      "simple_key"
      );
 end Ncurses_Howto_In_Ada;
 -- Local Variables:
