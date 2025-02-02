@@ -21,7 +21,7 @@ project Ncurses_Howto_In_Ada is
    end Binder;
 
    package Linker is
-      for Default_Switches ("Ada") use ("-lAdaCurses");
+      for Default_Switches ("Ada") use ("-ladacurses");
    end Linker;
 
    for Main use 
@@ -35,7 +35,8 @@ project Ncurses_Howto_In_Ada is
       "window_border",
       "other_border",
       "simple_color",
-      "simple_key"
+      "simple_key",
+      "mouse_menu"
      );
 end Ncurses_Howto_In_Ada;
 -- Local Variables:
