@@ -1,10 +1,8 @@
 with Terminal_Interface.Curses;         use Terminal_Interface.Curses;
 with Terminal_Interface.Curses.Text_IO; use Terminal_Interface.Curses.Text_IO;
 with Ada.Characters.Latin_1; use Ada.Characters;
-with Ada.Text_IO; 
-procedure Simple_Key is 
-   package ATIO renames Ada.Text_IO;
 
+procedure Simple_Key is 
    type Menu_Strings is array (Positive range <>) of String (1..8);
    Choices : constant Menu_Strings := 
      ("Choice 1", "Choice 2", "Choice 3", "Choice 4", "Exit    ");
