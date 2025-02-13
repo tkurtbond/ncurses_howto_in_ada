@@ -127,6 +127,8 @@ begin
    Clear_To_End_Of_Line;
    Refresh;
    delay 2.0;
+   -- Discard any pending input; sometimes the mouse has pending
+   -- input after exit is chosen.
    Flush_Input;
    End_Screen;
 end Mouse_Menu;
