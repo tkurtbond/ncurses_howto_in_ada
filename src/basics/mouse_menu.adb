@@ -34,7 +34,7 @@ procedure Mouse_Menu is
       end loop;
       Refresh (Menu_Win);
    end Print_Menu;
-   
+
    -- Report the choice according to mouse position.
    procedure Report_Choice (Mouse_Y : Line_Position;
                             Mouse_X : Column_Position;
@@ -43,7 +43,7 @@ procedure Mouse_Menu is
       I : Column_Position := Start_X + 2;
    begin
       for C in Choices'Range loop
-         if Mouse_Y = J + Line_Position (C) and 
+         if Mouse_Y = J + Line_Position (C) and
            -- On the right line?
            Mouse_X >= I and Mouse_X <= I + Trim (Choices(C), Both)'Length - 1
            -- In right columns?
@@ -105,11 +105,11 @@ begin
                   Report_Choice (Y, X, Choice);
                   exit when Choice = Exit_Choice;
                   Move_Cursor (Line => Lines - 2, Column => 1);
-                  if Choice not in Choices'Range then 
+                  if Choice not in Choices'Range then
                      Put ("Mouse was not clicked on a menu entry.");
                   else
                      Put ("Choice made is" & Natural'Image (Choice) &
-                       ".  String chosen is """ & 
+                       ".  String chosen is """ &
                        Trim (Choices (Choice), Both) & """.");
                   end if;
                   Clear_To_End_Of_Line;
