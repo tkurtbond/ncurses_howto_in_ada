@@ -37,7 +37,8 @@ project Ncurses_Howto_In_Ada is
       "other_border",
       "simple_color",
       "simple_key",
-      "mouse_menu"
+      "mouse_menu",
+      "temp_leave"
      );
 end Ncurses_Howto_In_Ada;
 -- Local Variables:
