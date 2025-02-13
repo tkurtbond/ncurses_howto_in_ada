@@ -81,6 +81,10 @@ begin
    Menu_Win := Create (Height, Width, Start_Y, Start_X);
    Print_Menu (Menu_Win, 0);    -- Print the menu for the first time.
 
+   -- This gets mouse clicks reported in Menu_Win, even on terminal emulators,
+   -- as well as on the Linux console.
+   Set_Keypad_Mode (Menu_Win);
+
    -- Get all the mouse events.
    Old_Event_Mask := Start_Mouse;
 
