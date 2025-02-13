@@ -126,5 +126,7 @@ begin
      Trim (Choices(Choice), Both) & """.");
    Clear_To_End_Of_Line;
    Refresh;
+   delay 2.0;
+   Flush_Input;
    End_Screen;
 end Mouse_Menu;
