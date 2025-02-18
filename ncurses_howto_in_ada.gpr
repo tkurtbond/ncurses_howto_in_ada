@@ -3,7 +3,7 @@ project Ncurses_Howto_In_Ada is
    -- export ADA_INCLUDE_PATH=/usr/local/sw/versions/AdaCurses/20211021/share/ada/adainclude
    -- export ADA_OBJECTS_PATH=/usr/local/sw/versions/AdaCurses/20211021/lib/ada/adalib
 
-   for Source_Dirs use ("src/basics");
+   for Source_Dirs use ("src/basics", "src/panels");
    for Object_Dir use "obj";
    for Exec_Dir use "bin";
 
@@ -27,6 +27,7 @@ project Ncurses_Howto_In_Ada is
 
    for Main use
      (
+      -- basics
       "hello_world",
       "init_func_example",
       "simple_put_example",
@@ -39,7 +40,10 @@ project Ncurses_Howto_In_Ada is
       "simple_key",
       "mouse_menu",
       "temp_leave",
-      "acs_vars"
+      "acs_vars",
+      -- panels
+      "panel_simple",
+      "panel_browse"
      );
 end Ncurses_Howto_In_Ada;
 -- Local Variables:
