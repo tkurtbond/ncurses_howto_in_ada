@@ -38,7 +38,8 @@ project Ncurses_Howto_In_Ada is
       "simple_color",
       "simple_key",
       "mouse_menu",
-      "temp_leave"
+      "temp_leave",
+      "acs_vars"
      );
 end Ncurses_Howto_In_Ada;
 -- Local Variables:
